@@ -11,4 +11,14 @@ class Time {
     public function AdicionaJogador(Jogador $jogador) {
         array_push($this->Jogadores, $jogador);
     }
+
+    public function GetHabilidade() {
+        $habilidade = 0;
+
+        foreach ($this->Jogadores as $jogador){
+            $habilidade += $jogador->Habilidade;
+        }
+
+        return $habilidade;
+    }
 }
