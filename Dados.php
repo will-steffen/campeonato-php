@@ -1,6 +1,6 @@
 <?php
-include_once './models/Jogador.php';
-include_once './models/Time.php';
+include_once 'models/Jogador.php';
+include_once 'models/Time.php';
 
 function GetPosicao() {
     $posicoes = array("Atacante", "Meio-Campo", "Zagueiro", "Goleiro");
