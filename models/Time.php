@@ -3,6 +3,7 @@
 class Time {
     var $Nome;
     var $Jogadores = array();
+    var $Habilidade;
 
     public function __construct($nome) {
         $this->Nome = $nome;
@@ -10,6 +11,7 @@ class Time {
 
     public function AdicionaJogador(Jogador $jogador) {
         array_push($this->Jogadores, $jogador);
+        $this->Habilidade = $this->GetHabilidade();
     }
 
     public function GetHabilidade() {

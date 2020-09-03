@@ -23,14 +23,14 @@ class Campeonato {
             $ultimaRodada = $this->Rodadas[count($this->Rodadas) - 1];
             $times = array();
             foreach($ultimaRodada->Confrontos as $confronto){
-                array_push($times, $confronto->GetVencedor());
+                array_push($times, $confronto->Vencedor);
             }
         }
 
         $rodada->DecidirConfrontos($times);
         array_push($this->Rodadas, $rodada);
         $this->rodadaContador++;
-
+        return $rodada;
     }
 }
 

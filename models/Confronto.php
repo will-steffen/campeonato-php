@@ -3,10 +3,12 @@
 class Confronto {
     var $Time1;
     var $Time2; 
+    var $Vencedor;
 
     function __construct($time1, $time2) {
         $this->Time1 = $time1;
         $this->Time2 = $time2;
+        $this->Vencedor = $this->GetVencedor();
     }
 
     function GetVencedor() {

@@ -9,13 +9,6 @@ class Rodada {
         $this->Numero = $numero;
     }
 
-    function GetVencedor() {
-        if($this->Time1->GetHabilidade() > $this->Time2->GetHabilidade()){
-            return $this->Time1;
-        }
-        return $this->Time2;
-    }
-
     function DecidirConfrontos($times) {
         while (count($times) > 0){
             $time1 = $times[rand(0, count($times) - 1)];  
